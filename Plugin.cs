@@ -114,7 +114,8 @@ namespace ULTRAHUD
                 hudFilePointer--;
                 StartCoroutine(LoadHUD(hudFilePointer));
             }
-            else if (Input.GetKeyDown(KeyCode.K) && !loadingHUD && MonoSingleton<OptionsManager>.Instance.paused)
+            else if (Input.GetKeyDown(KeyCode.K) && !loadingHUD && MonoSingleton<OptionsManager>.Instance.paused &&
+                SceneManager.GetActiveScene().name.StartsWith("Level") || SceneManager.GetActiveScene().name.StartsWith("Endless"))
             {
                 MonoSingleton<OptionsManager>.Instance.pauseMenu.SetActive(false);
                 enableGUI = true;
@@ -223,6 +224,7 @@ namespace ULTRAHUD
             {
                 hudFilePointer = 0;
                 Debug.Log("no files");
+                StartCoroutine(SaveNewHUD());
                 yield break;
             }
             // if the player isn't in a level
