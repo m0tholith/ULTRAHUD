@@ -18,10 +18,10 @@ Yes it is basic but functional, I just wanna release this now because it's good 
 <h1>I THINK I'M GETTING THE MOD, BUT HOW AM I GONNA DO THAT?</h1>
 You need to have <a href=https://github.com/BepInEx/BepInEx/releases>BepInEx</a> installed in your ULTRAKILL directory, and here's how to do it:
 <ul>
-    <li>Download the BepInEx `.zip` file that corresponds to your system architecture, to your ULTRAKILL folder:
+    <li>Download the BepInEx <code>.zip</code> file that corresponds to your system architecture, to your ULTRAKILL folder:
         <ul>
-            <li>unix for unix-based operating systems, like Linux and MacOS.</li>
-            <li>x64 for 32-bit Windows systems.</li>
+            <li>unix for unix-based operating systems, like MacOS.</li>
+            <li>x64 for 32-bit Windows systems and Linux, though for Linux you need to set up BepInEx with Proton or Wine: https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine.</li>
             <li>x86 for 64-bit Windows systems.</li>
         </ul>
         If you're unsure whether you have a 32-bit or 64-bit Windows system, follow these steps:
