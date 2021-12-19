@@ -21,8 +21,8 @@ You need to have <a href=https://github.com/BepInEx/BepInEx/releases>BepInEx</a>
     <li>Download the BepInEx <code>.zip</code> file that corresponds to your system architecture, to your ULTRAKILL folder:
         <ul>
             <li>unix for unix-based operating systems, like MacOS.</li>
-            <li>x64 for 32-bit Windows systems and Linux, though for Linux you need to set up BepInEx with Proton or Wine: https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine.</li>
-            <li>x86 for 64-bit Windows systems.</li>
+            <li>x64 for 32-bit executables, though for Linux you need to set up BepInEx with Proton or Wine: https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine.</li>
+            <li>x86 for 64-bit executables.</li>
         </ul>
         If you're unsure whether you have a 32-bit or 64-bit Windows system, follow these steps:
         <ul>
