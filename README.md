@@ -18,19 +18,8 @@ Yes it is basic but functional, I just wanna release this now because it's good 
 <h1>I THINK I'M GETTING THE MOD, BUT HOW AM I GONNA DO THAT?</h1>
 You need to have <a href=https://github.com/BepInEx/BepInEx/releases>BepInEx</a> installed in your ULTRAKILL directory, and here's how to do it:
 <ul>
-    <li>Download the BepInEx <code>.zip</code> file that corresponds to your system architecture, to your ULTRAKILL folder:
-        <ul>
-            <li>unix for unix-based operating systems, like MacOS.</li>
-            <li>x64 for 32-bit executables, though for Linux you need to set up BepInEx with Proton or Wine: https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine.</li>
-            <li>x86 for 64-bit executables.</li>
-        </ul>
-        If you're unsure whether you have a 32-bit or 64-bit Windows system, follow these steps:
-        <ul>
-            <li>Open the Settings app.</li>
-            <li>Go to System > About.</li>
-            <li>Under "Device Specifications" you'll see "System type," along with the archiecture.</li>
-        </ul>
-        To get to your ULTRAKILL folder:
+    <li>Download the BepInEx x64 <code>.zip</code> file to your ULTRAKILL folder, though for Linux, you would need to set up BepInEx with Proton or Wine. https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine
+        <br>To get to your ULTRAKILL folder:
         <ul>
             <li>Open the ULTRAKILL tab in your Steam library.</li>
             <li>Click on the Settings icon, or right click on the ULTRAKILL tab, and click Manage > Browse local files.</li>
