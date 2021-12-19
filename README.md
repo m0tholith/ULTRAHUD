@@ -46,5 +46,6 @@ ULTRAHUD stores HUDs as images that you can send to other people, they are locat
 <ul>
     <li>If you have ULTRAHUD, you have to use it as your "COLORS" settings replacement. It's better anyway, unless you need to change enemy outlines.</li>
     <li>It's better to delete HUDs from the ULTRAHUD menu instead of directly in your file explorer.</li>
+    <li>You can change the <code>dreamed.jpg</code> file to anything you want, as long as it's 635x98 pixels in size.</li>
 </ul>
 <h3>Thank you for downloading ULTRAHUD! If you want to send me any feedback, bug reports, or anything, make a new <a href="https://github.com/Captain-Ravioli/ULTRAHUD/issues/new/choose">issue</a> so I can see it.
