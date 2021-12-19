@@ -20,7 +20,7 @@ namespace ULTRAHUD
         private int hudFilePointer, hudSettingsPointer; // loadingPointer: points at what HUD to load, hudSettingsPointer: pointer for new HUD settings
         private bool loadingHUD; // is a HUD being loaded?
         private Rect windowRect = new Rect(Screen.width / 2 - 330, Screen.height / 2 - 375, 660, 750);
-        private bool enableGUI, inMenu, newHUD, delHUD; // enableGUI: show the ULTRAHUD menu and its sub-menus, inMenu: tells whether the player is in the ULTRAHUD menu, others are for what sub-menu the player selected
+        private bool enableGUI = false, inMenu, newHUD, delHUD; // enableGUI: show the ULTRAHUD menu and its sub-menus, inMenu: tells whether the player is in the ULTRAHUD menu, others are for what sub-menu the player selected
         private bool loadHUDAtStart = true; // checks for loading the pointer'th HUD when entering a level
         private ConfigEntry<int> pointerConfig; // saves pointer so when the player boots the game up, the same HUD will be loaded
         private Texture2D dreamed; // dreamed
@@ -104,6 +104,8 @@ namespace ULTRAHUD
             if (loadHUDAtStart && 
                 (SceneManager.GetActiveScene().name.StartsWith("Level") || SceneManager.GetActiveScene().name.StartsWith("Endless")))
             {
+                if (Directory.GetFiles(hudsPath).Length == 0)
+                    StartCoroutine(SaveNewHUD());
                 loadHUDAtStart = false;
                 StartCoroutine(LoadHUD(hudFilePointer));
             }
@@ -114,11 +116,14 @@ namespace ULTRAHUD
                 hudFilePointer--;
                 StartCoroutine(LoadHUD(hudFilePointer));
             }
-            else if (Input.GetKeyDown(KeyCode.K) && !loadingHUD && MonoSingleton<OptionsManager>.Instance.paused &&
-                SceneManager.GetActiveScene().name.StartsWith("Level") || SceneManager.GetActiveScene().name.StartsWith("Endless"))
+            else if (Input.GetKeyDown(KeyCode.K))
             {
-                MonoSingleton<OptionsManager>.Instance.pauseMenu.SetActive(false);
-                enableGUI = true;
+                if (!loadingHUD && MonoSingleton<OptionsManager>.Instance.paused &&
+                SceneManager.GetActiveScene().name.StartsWith("Level") || SceneManager.GetActiveScene().name.StartsWith("Endless"))
+                {
+                    MonoSingleton<OptionsManager>.Instance.pauseMenu.SetActive(false);
+                    enableGUI = true;
+                }
             }
             // if in ULTRAHUD menu and press escape
             else if (Input.GetKeyDown(KeyCode.Escape) && enableGUI)
@@ -218,13 +223,11 @@ namespace ULTRAHUD
 
         private IEnumerator LoadHUD(int pointer)
         {
-
             // if there are no files
             if (!Directory.EnumerateFileSystemEntries(hudsPath).Any())
             {
                 hudFilePointer = 0;
                 Debug.Log("no files");
-                StartCoroutine(SaveNewHUD());
                 yield break;
             }
             // if the player isn't in a level
@@ -344,7 +347,7 @@ namespace ULTRAHUD
             textFieldStyle.alignment = TextAnchor.MiddleCenter;
 
             // draw ULTRAHUD menu
-            if (enableGUI)
+            if (enableGUI && Directory.GetFiles(hudsPath).Length != 0)
             {
                 GUI.backgroundColor = new Color(0.25f, 0.25f, 0.25f, 1);
                 windowRect = GUILayout.Window(0, windowRect, DrawWindow, "", GUILayout.MaxWidth(660), GUILayout.MaxHeight(750));
@@ -373,6 +376,7 @@ namespace ULTRAHUD
                             inMenu = true;
                             newHUD = true;
                         }
+                        // TODO: implement edit functionality
                         // // if (GUILayout.Button("EDIT HUD", buttonStyle, GUILayout.MaxWidth(646), GUILayout.MaxHeight(60)))
                         // // {}
                         // // GUILayout.Space(15);
