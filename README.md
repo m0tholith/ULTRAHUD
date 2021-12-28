@@ -9,8 +9,9 @@ An ULTRAKILL mod that allows you to easily create, switch between, and share HUD
 
 <h1>COMING SOON</h1>
 <ul>
-    <li>Editing already created HUDs.</li>
+    <li><strike>Editing already created HUDs.</strike></li>
     <li>Changing the health bar color when you're on low health, or based on your current style.</li>
+    <li>Custom crosshair colors/icons</li>
     <li><b><i><u>p  l  o  o  g</u></b></i></li>
 </ul>
 
