@@ -17,15 +17,15 @@ An ULTRAKILL mod that allows you to easily create, switch between, and share HUD
 <h1>INSTALLATION</h1>
 You need to have <a href=https://github.com/BepInEx/BepInEx/releases>BepInEx</a> installed in your ULTRAKILL directory to use this mod, and here's how to do it:
 <ul>
-    <li>Download the BepInEx x64 <code>.zip</code> file to your ULTRAKILL folder, though for Linux, you would need to set up BepInEx with Proton or Wine. https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine
-        <br>To get to your ULTRAKILL folder:
+    <li>Open your ULTRAKILL folder:</li>
         <ul>
             <li>Open the ULTRAKILL tab in your Steam library.</li>
             <li>Click on the Settings icon, or right click on the ULTRAKILL tab, and click Manage > Browse local files.</li>
         </ul>
+    <li>Download and extract the BepInEx x64 <code>.zip</code> file to your ULTRAKILL folder, though for Linux, you would need to set up BepInEx with Proton or Wine. https://docs.bepinex.dev/articles/advanced/steam_interop.html#protonwine
     </li>
-    <li>Run the game once so BepInEx can generate config files and other stuff.</li>
-    <li>Download the ULTRAHUD zip from the <a href="https://github.com/Captain-Ravioli/ULTRAHUD/releases">Releases</a> tab, into the BepInEx\plugins folder in your ULTRAKILL directory.</li>
+    <li>Run the game for a few seconds so BepInEx can generate config files and other stuff.</li>
+    <li>Download and extract the ULTRAHUD zip from the <a href="https://github.com/Captain-Ravioli/ULTRAHUD/releases">Releases</a> tab, into the BepInEx\plugins folder in your ULTRAKILL directory.</li>
 </ul>
 And that's it! You now have the ULTRAHUD mod!<br>
 
