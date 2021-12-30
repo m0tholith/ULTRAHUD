@@ -4,7 +4,7 @@ An ULTRAKILL mod that allows you to easily create, switch between, and share HUD
 
 <h1>CONTROLS</h1>
 <code>J/L</code>: Switch between HUDs.<br>
-<code>K</code>: Open the ULTRAHUD menu, where you can create a new HUD or delete one.<br>
+<code>K</code>: Open the ULTRAHUD menu (if you're in a level or in the Cybergrind and have the game paused), where you can create a new HUD or delete one.<br>
 <code>Esc</code>: Exit the ULTRAHUD menu.<br>
 
 <h1>IMPORTANT NOTES</h1>
